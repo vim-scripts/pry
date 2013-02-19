@@ -1,0 +1,13 @@
+This is a mirror of http://www.vim.org/scripts/script.php?script_id=4451
+
+For the high-falutin' concept, see: https://github.com/pry/pry/wiki/pry-de
+
+iabbr bpry => require 'pry'; binding.pry # Very important for quickly dropping into pry
+
+<leader>bp and <leader><leader>p # same as bpry but from Normal Mode
+
+<f3> = kill-pry-rescue # see https://github.com/ConradIrwin/pry-rescue - this breaks you out of the auto-rescue'd pry
+
+<leader>ph = Grab the last line (or lines if given a numerical arg) from ~/.pry_history - can be very handy, because you can perfect your code in the live coding environment of the Pry REPL, then slurp that into your editor.
+
+Note that there are ways to integrate back into the REPL from the editor. vslime and vimux do this, as long as you're in tmux. However, I currently just do "!tmux send -t1" in a manual :map from vim. This script might eventually include something like this. Please let me know if you already know what you want.
